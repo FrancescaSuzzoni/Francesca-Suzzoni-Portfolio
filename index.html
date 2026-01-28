@@ -193,16 +193,16 @@
 
                 <form class="contact-form">
                     <div class="input-group">
-                        <input type="text" required>
-                        <label>Nom</label>
+                        <input id="user-name" type="text" required>
+                        <label for="user-name">Nom</label>
                     </div>
                     <div class="input-group">
-                        <input type="email" required>
-                        <label>Email</label>
+                        <input id="user-email" type="email" required>
+                        <label for="user-email">Email</label>
                     </div>
                     <div class="input-group">
-                        <textarea rows="4" required></textarea>
-                        <label>Message</label>
+                        <textarea id="user-message" rows="4" required></textarea>
+                        <label for="user-message">Message</label>
                     </div>
                     <button type="submit">ENVOYER</button>
                 </form>
@@ -212,14 +212,12 @@
     </main>
 
     <script>
-        
         const light = document.querySelector('.cursor-light');
         document.addEventListener('mousemove', (e) => {
             light.style.left = e.clientX - 300 + 'px';
             light.style.top = e.clientY - 300 + 'px';
         });
 
-        
         const skillData = {
             design: [
                 { name: "Photoshop", img: "https://logos-world.net/wp-content/uploads/2020/11/Adobe-Photoshop-Logo.png", p: 90 },
@@ -257,7 +255,6 @@
             document.getElementById('skill-detail').style.display = 'none';
         }
 
-        
         const projectsData = {
             'interview': {
                 title: "Interview Vidéo",
@@ -311,13 +308,9 @@
 
         function openProject(id) {
             const data = projectsData[id];
-            
-            // Remplir les données
             document.getElementById('proj-title').textContent = data.title;
             document.getElementById('proj-desc').textContent = data.desc;
             document.getElementById('proj-img').src = data.img;
-            
-            // Remplir les tags
             const tagsContainer = document.getElementById('proj-tags');
             tagsContainer.innerHTML = '';
             data.tags.forEach(tag => {
@@ -326,8 +319,6 @@
                 span.textContent = tag;
                 tagsContainer.appendChild(span);
             });
-
-            // Afficher la vue détail
             document.getElementById('projects-main-view').style.display = 'none';
             document.getElementById('project-detail-view').style.display = 'block';
         }
@@ -336,7 +327,6 @@
             document.getElementById('project-detail-view').style.display = 'none';
             document.getElementById('projects-main-view').style.display = 'grid';
         }
-
     </script>
 </body>
 </html>
