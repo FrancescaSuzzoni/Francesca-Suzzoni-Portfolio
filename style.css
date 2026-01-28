@@ -1,7 +1,9 @@
 :root {
     --bg-dark: #050a14; 
-    --neon-blue: #c73aff; 
-    --neon-purple: #bc13fe; 
+    /* Ajusté de #c73aff à #df99ff pour le ratio 7:1 */
+    --neon-blue: #df99ff; 
+    /* Ajusté de #bc13fe à #e7b0ff pour le ratio 7:1 */
+    --neon-purple: #e7b0ff; 
     --text-main: #ffffff;
     --glass-bg: rgba(255, 255, 255, 0.03);
     --glass-border: rgba(255, 255, 255, 0.1);
@@ -60,8 +62,9 @@ body {
     margin: 0;
     letter-spacing: 5px;
     color: transparent;
-    -webkit-text-stroke: 1px rgba(219, 134, 255, 0.8); 
-    text-shadow: 0 0 20px rgba(126, 45, 144, 0.5);
+    /* Ajusté pour la lisibilité sur le fond sombre */
+    -webkit-text-stroke: 1px #e7b0ff; 
+    text-shadow: 0 0 20px rgba(223, 153, 255, 0.5);
 }
 
 .subtitle {
@@ -130,7 +133,7 @@ body {
 
 .info-box p {
     font-size: 0.9rem;
-    color: #ccc;
+    color: #e0e0e0; /* Éclairci pour le ratio 7:1 */
     font-style: italic;
 }
 
@@ -218,13 +221,13 @@ body {
     align-items: center;
     justify-content: center;
     border: 2px solid var(--neon-blue);
-    box-shadow: 0 0 20px rgba(0, 243, 255, 0.2);
+    box-shadow: 0 0 20px rgba(223, 153, 255, 0.2);
     flex-shrink: 0;
 }
 
 .about-text-bubble p {
     font-size: 1rem;
-    color: #ddd;
+    color: #e5e5e5; /* Éclairci pour le ratio 7:1 */
 }
 
 .highlight { color: var(--neon-blue); font-weight: bold; }
@@ -256,7 +259,7 @@ body {
 .timeline-item:hover .dot { background-color: var(--neon-blue); }
 
 .timeline-content h3 { margin: 0 0 5px 0; color: var(--neon-blue); font-size: 1.1rem; }
-.timeline-content p { margin: 0; font-size: 0.9rem; color: #aaa; }
+.timeline-content p { margin: 0; font-size: 0.9rem; color: #b0b0b0; /* Éclairci pour le ratio 7:1 */ }
 
 .skills-grid, .projects-grid {
     display: grid;
@@ -277,7 +280,7 @@ body {
 .skill-card:hover, .project-card:hover {
     transform: translateY(-5px);
     border-color: var(--neon-blue);
-    box-shadow: 0 5px 20px rgba(0, 243, 255, 0.1);
+    box-shadow: 0 5px 20px rgba(223, 153, 255, 0.1);
 }
 
 .skill-card h3, .project-card h3 {
@@ -313,7 +316,7 @@ body {
     text-decoration: none;
     transition: 0.3s;
 }
-.tag:hover { background: var(--neon-blue); color: var(--bg-dark); }
+.tag:hover { background: var(--neon-blue); color: #000; /* Meilleur contraste au survol */ }
 
 .contact-container {
     display: flex;
@@ -347,7 +350,7 @@ input:focus, textarea:focus { border-bottom-color: var(--neon-blue); }
 .input-group label {
     position: absolute;
     top: 10px; left: 0;
-    color: #888;
+    color: #a6a6a6; /* Éclairci pour le ratio 7:1 */
     pointer-events: none;
     transition: 0.3s;
     font-size: 0.9rem;
@@ -370,7 +373,7 @@ button {
 
 button:hover {
     background: var(--neon-blue);
-    color: var(--bg-dark);
+    color: #000;
     box-shadow: 0 0 20px var(--neon-blue);
 }
 
@@ -485,7 +488,7 @@ button:hover {
 }
 
 .project-text-column p {
-    color: #ddd;
+    color: #e0e0e0; /* Éclairci pour le ratio 7:1 */
     font-size: 1rem;
     line-height: 1.8;
     margin-bottom: 20px;
@@ -516,7 +519,7 @@ button:hover {
     height: auto;
     object-fit: contain;
     border-radius: 10px;
-    box-shadow: 0 0 20px rgba(199, 58, 255, 0.2);
+    box-shadow: 0 0 20px rgba(223, 153, 255, 0.2);
     transition: transform 0.5s;
 }
 
